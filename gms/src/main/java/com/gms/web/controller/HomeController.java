@@ -1,4 +1,4 @@
-package com.gms.controller;
+package com.gms.web.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -33,7 +33,7 @@ public class HomeController {
 		logger.info("Welcome home! The client locale is {}.", ctx);
 		session.setAttribute("ctx", ctx);
 		
-		return "home";
+		return "main";
 	}
 	
 }
