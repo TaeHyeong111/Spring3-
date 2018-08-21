@@ -222,7 +222,13 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/grayscale.min.js"></script>
-
+	<script> 
+	/* document.ElementById('login_btn') << $('#login btn')
+	.addEventListener('click',function(){ << on('click',function(){alert('로그인 버튼클릭')})
+	alert("로그인버튼 클릭");	
+	}); */
+	$('#login btn').on('click',function(){alert('로그인 버튼클릭')})
+	</script>
   </body>
 
 </html>
