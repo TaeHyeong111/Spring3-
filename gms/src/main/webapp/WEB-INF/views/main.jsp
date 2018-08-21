@@ -6,7 +6,7 @@
 	<script src="${ctx}/resources/js/app.js"></script>
 </head>
 <body>
-<h1>
+<h1> 
 	Hello world!  
 </h1>
 
