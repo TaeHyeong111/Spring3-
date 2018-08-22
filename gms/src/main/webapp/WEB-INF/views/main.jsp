@@ -1,31 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-
-  <head>
-
+	<head>
+	<title>Grayscale - Start Bootstrap Theme</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Grayscale - Start Bootstrap Theme</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" type="text/css" href="${ctx}/resources/vendor/bootstrap/css/bootstrap.min.css" >
-
-    <!-- Custom fonts for this template -->
-    <link rel="stylesheet" type="text/css" href="${ctx}/resources/vendor/fontawesome-free/css/all.min.css" >
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round" >
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="${ctx}/resources/css/grayscale.min.css">
-
+    
+    <link rel="shortcut icon" href="${ctx}/resources/img/favicon.ico" />
+    <link href="${ctx}/resources/vendor/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="${ctx}/resources/vendor/fontawesome-free/css/all.min.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"  rel="stylesheet">
+    <link href="${ctx}/resources/css/grayscale.min.css" type="text/css" rel="stylesheet">
+      
+    
+	<%-- <script src="${ctx}/resources/js/app.js"></script> --%>
   </head>
 
   <body id="page-top">
 
     <!-- Navigation -->
+    
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
@@ -36,7 +32,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link js-scroll-trigger" href="#about" id="login_btn">Login</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
@@ -53,7 +49,7 @@
     <header class="masthead">
       <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto text-center">
-          <h1 class="mx-auto my-0 text-uppercase">Grayscale</h1>
+          <h1 class="mx-auto my-0 text-uppercase">BitCamp</h1>
           <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2>
           <a href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a>
         </div>
@@ -70,7 +66,7 @@
               <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
           </div>
         </div>
-        <img src="img/ipad.png" class="img-fluid" alt="">
+        <img src="${ctx}/resources/img/ipad.png" class="img-fluid" alt="">
       </div>
     </section>
 
@@ -81,7 +77,7 @@
         <!-- Featured Project Row -->
         <div class="row align-items-center no-gutters mb-4 mb-lg-5">
           <div class="col-xl-8 col-lg-7">
-            <img class="img-fluid mb-3 mb-lg-0" src="img/bg-masthead.jpg" alt="">
+            <img class="img-fluid mb-3 mb-lg-0" src="${ctx}/resources/img/bg-masthead.jpg" alt="">
           </div>
           <div class="col-xl-4 col-lg-5">
             <div class="featured-text text-center text-lg-left">
@@ -94,7 +90,7 @@
         <!-- Project One Row -->
         <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
           <div class="col-lg-6">
-            <img class="img-fluid" src="img/demo-image-01.jpg" alt="">
+            <img class="img-fluid" src="${ctx}/resources/img/demo-image-01.jpg" alt="">
           </div>
           <div class="col-lg-6">
             <div class="bg-black text-center h-100 project">
@@ -112,7 +108,7 @@
         <!-- Project Two Row -->
         <div class="row justify-content-center no-gutters">
           <div class="col-lg-6">
-            <img class="img-fluid" src="img/demo-image-02.jpg" alt="">
+            <img class="img-fluid" src="${ctx}/resources/img/demo-image-02.jpg" alt="">
           </div>
           <div class="col-lg-6 order-lg-first">
             <div class="bg-black text-center h-100 project">
@@ -214,21 +210,18 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="${ctx}/resources/vendor/jquery/jquery.min.js"></script>
+    <script src="${ctx}/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="${ctx}/resources/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/grayscale.min.js"></script>
-	<script> 
-	/* document.ElementById('login_btn') << $('#login btn')
-	.addEventListener('click',function(){ << on('click',function(){alert('로그인 버튼클릭')})
-	alert("로그인버튼 클릭");	
-	}); */
-	$('#login btn').on('click',function(){alert('로그인 버튼클릭')})
-	</script>
+    <script src="${ctx}/resources/js/grayscale.min.js"></script>
+    <script>
+    common.main('${ctx}')
+    </script>
   </body>
 
 </html>
+

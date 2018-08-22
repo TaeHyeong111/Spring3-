@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
-<jsp:include page="../common/head.jsp" />
 <body>
     <div id="wrapper">
         

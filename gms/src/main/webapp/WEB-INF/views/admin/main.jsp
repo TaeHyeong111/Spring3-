@@ -3,7 +3,6 @@
 <c:set var="ctx" value="<%=application.getContextPath() %>" /> --%>
 <!doctype html>
 <html lang="en">
-<jsp:include page="../common/head.jsp"/>
 <body>
 <div id="wrapper">
     <div id="header">
@@ -12,10 +11,8 @@
     <jsp:include page="../member/search.jsp"/>
     </div> <!-- content end -->
     <div id = "footer">
-    <jsp:include page="../common/footerBox.jsp"/>
     </div>
     <div id = "menu">
-    <jsp:include page="../common/menuBox.jsp"/>
     </div>
 </div>
 </body>

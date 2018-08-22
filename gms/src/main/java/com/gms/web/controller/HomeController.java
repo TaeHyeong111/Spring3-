@@ -33,7 +33,7 @@ public class HomeController {
 		logger.info("Welcome home! The client locale is {}.", ctx);
 		session.setAttribute("ctx", ctx);
 		
-		return "main";
+		return "public:common/contact.tiles";
 	}
 	
 }
