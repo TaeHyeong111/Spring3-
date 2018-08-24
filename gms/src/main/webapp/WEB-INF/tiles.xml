@@ -9,13 +9,25 @@
         <put-attribute name="about" value="/WEB-INF/views/common/about.jsp"/>
         <put-attribute name="contact" value=""/>
         <put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp"/>
-        
         <put-attribute name="navigation" value="/WEB-INF/views/common/navigation.jsp"/>
         <put-attribute name="projects" value="/WEB-INF/views/common/projects.jsp"/>
+        <put-attribute name="login" value=""/>
+        
         
         
     </definition>
     <definition name="public:*/*.tiles" extends="public">
     <put-attribute name="contact" value="/WEB-INF/views/{1}/{2}.jsp"></put-attribute>
     </definition>
+    
+     <definition name="auth:*/*.tiles" extends="public">
+    <put-attribute name="navigation" value="/WEB-INF/views/{1}/{2}.jsp"></put-attribute>
+    </definition>
+    
+     <definition name="login__success" extends="public">
+    <put-attribute name="navigation" value="/WEB-INF/views/{1}/{2}.jsp"></put-attribute>
+    </definition>
+    
+   
+    
 </tiles-definitions>

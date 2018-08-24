@@ -1,10 +1,15 @@
 package com.gms.web.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.gms.web.domain.MemberDTO;
 @Controller
 @RequestMapping("/member")
 public class MemberController {
+	@Autowired MemberDTO member;
 	@RequestMapping("/add")
 	public void add() {}
 	@RequestMapping("/list")
@@ -20,11 +25,14 @@ public class MemberController {
 	@RequestMapping("/remove")
 	public void remove() {}
 	@RequestMapping("/login")
-	public void login() {}
+	public String login() {
+		member.setName("");
+		return "login__success";
+	}
 	@RequestMapping("/logout")
-	public void logout() {}
-	@RequestMapping("/move")
-	public void move() {}
+	public String logout() {
+		return "redirect:/";
+	}
 	@RequestMapping("/fileupload")
 	public void fileupload() {}
 }

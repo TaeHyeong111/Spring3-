@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#" id="login_btn">Login</a>
+              <a class="nav-link js-scroll-trigger" id="logout_btn">LogOut</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" id="join_btn">Join</a>

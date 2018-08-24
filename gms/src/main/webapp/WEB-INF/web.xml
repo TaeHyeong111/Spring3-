@@ -21,7 +21,7 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath:META-INF/*-context.xml</param-value>
+			<param-value>classpath:META-INF/*-context.xml</param-value> <!-- <<여기안에 있는 모든것은 Bean객체임 -->
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>

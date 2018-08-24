@@ -20,7 +20,7 @@
 </head>    
 <body>
 <div id="wrapper">
-<div id="header">
+	<div id="header">
         <tiles:insertAttribute name="header"/>
     </div>
     <div id="about">
