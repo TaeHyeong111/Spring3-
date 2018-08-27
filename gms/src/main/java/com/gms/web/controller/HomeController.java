@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 @SessionAttributes("ctx")
 public class HomeController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(HttpSession session, HttpServletRequest request) {
 		String ctx = request.getContextPath();

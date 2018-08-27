@@ -7,7 +7,7 @@ import lombok.Data;
 @Data // d
 public class MemberDTO {
 	private String userId, ssn, name, roll, teamId, password, age, subject, gender;
-
+	
 	public String getUserId() {
 		return userId;
 	}

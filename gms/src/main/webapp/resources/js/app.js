@@ -19,7 +19,7 @@ app = {
 				location.href = app.x()+'/member/login'
 			})
 			$('#loginFormBtn').click(()=>{
-				location.href = app.x()+'/move/auth/member/navigation'
+				location.href = app.x()+'/member/login'
 			})
 			$('#logout_btn').click(()=>{
 				location.href = app.x()+'/member/logout'

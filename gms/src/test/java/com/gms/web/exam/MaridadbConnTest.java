@@ -4,12 +4,14 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class MariadbConnTest111 {
+import com.gms.web.exam.MariadbConn;
+
+public class MaridadbConnTest {
 
 	@Test
 	public void test() {
 		MariadbConn m = new MariadbConn();
-		assertEquals("hong",m.exam( ));
+		assertEquals("A10", m.exam());
 	}
 
 }
