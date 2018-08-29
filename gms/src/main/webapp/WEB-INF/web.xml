@@ -3,19 +3,26 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+         
+         <!-- web.xml에 등록되어 있는 ContextLoaderListener(Java Class)가 생성된다. 
+	ContextLoaderListener 클래스는 ServletContextListener 인터페이스를 구현하고 있으며, 
+	ApplicationContext를 생성하는 역할을 수행한다. -->
 
-	<context-param>  <!-- 전역변수임 -->
+	<context-param>  <!-- 초기화면설정 : 웹어플실행시 value의 경로로 이동하여 값을 context에 저장한다. --> 
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:META-INF/*-context.xml</param-value>
-		<!--맵구조임 contextConfigLocation.put("?(아래 서블릿의 클래스가 키값인듯)",classpath:META-INF/root-context.xml); -->
-		<!-- classpath는 META-INF바로 위까지 -->
 	</context-param>
 	
-	<!-- 개발자가 만드는공간 listener -->
-	<listener>
+	
+	
+	<!-- 생성된 ContextLoaderListener는 root-context.xml을 loading한다. -->
+	<listener> 
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 
+	 <!-- 클라이언트로부터 요청 온 메시지를 분석하여 알맞은 
+	 PageController에게 전달하고 응답을 받아 요청에 따른 응답을 어떻게 할 지 결정만한다. 
+	 실질적은 작업은 PageController에서 이루어지기 때문이다.  -->
 	<servlet>
 		<servlet-name>appServlet</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>

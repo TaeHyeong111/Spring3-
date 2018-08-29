@@ -11,7 +11,8 @@
         <put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp"/>
         <put-attribute name="navigation" value="/WEB-INF/views/common/navigation.jsp"/>
         <put-attribute name="projects" value="/WEB-INF/views/common/projects.jsp"/>
-        <put-attribute name="login" value=""/>
+        <put-attribute name="retrieve" value=""/>
+        
         
         
         
@@ -26,6 +27,11 @@
     
      <definition name="login__success" extends="public">
     <put-attribute name="navigation" value="/WEB-INF/views/member/navigation.jsp"></put-attribute>
+    <put-attribute name="retrieve" value="/WEB-INF/views/member/retrieve.jsp"/>
+    </definition>
+    
+    <definition name="add__succes" extends="public">
+    <put-attribute name="retrieve" value="/WEB-INF/views/member/login.jsp"/>
     </definition>
     
    

@@ -2,25 +2,46 @@
 var app = app || {}; 
 app = {
 		init : x=>{
-			console.log('step1')
 			app.session.ctx(x)
 			app.onCreate();
 		},
 		onCreate : ()=>{
 			console.log('step3')
 			app.setContentView()
-			$('#login_btn').click(()=>{
+			$('#login_btn').click(()=>{ /*(/web/move/public/member/login)*/
 				location.href = app.x()+'/move/public/member/login'
 			})
 			$('#join_btn').click(()=>{
 				location.href = app.x()+'/move/public/member/add'
 			})
+			
+			/*$('#joinFormBtn').click(()=>{
+				alert("joinForm 버튼클릭!")
+				var form = document.getElementById('#joinForm');
+				form.action = app.x()+"/member/add"
+				form.method = "POST"; //get은 입력값을 노출, post는 노출x form태그만 post방식이 있음
+			})*/
 			$('#joinFormBtn').click(()=>{
-				location.href = app.x()+'/member/login'
+				$('#joinForm').attr({
+					action:app.x()+"/member/add",
+					method:"POST"
 			})
+			.submit();
+			})
+			
 			$('#loginFormBtn').click(()=>{
-				location.href = app.x()+'/member/login'
+				app.session.click(document.getElementById('userLoginForm').password.value)
+				$('#userLoginForm').attr({
+					action:app.x()+"/member/login",
+					method:"POST"
+				})
+				.submit();
 			})
+			$('#myPageMoveToUpdate').click(()=>{
+				alert(app.click())
+			})
+			.submit();
+			
 			$('#logout_btn').click(()=>{
 				location.href = app.x()+'/member/logout'
 			})
@@ -31,15 +52,21 @@ app = {
 }
 app.session = {
 		ctx : x =>{
-			console.log('step2 :: '+x)
 			sessionStorage.setItem('ctx',x);
 			sessionStorage.setItem('js',x+'/resources/js');
 			sessionStorage.setItem('css',x+'/resources/css');
 			sessionStorage.setItem('img',x+'/resources/img');
 		},
-		path : x=>{
+		path : x =>{
+			return sessionStorage.getItem(x);
+		},
+		click : x =>{
+			sessionStorage.setItem('click', x)
+		},
+		path : x =>{
 			return sessionStorage.getItem(x);
 		}
+		
 }
 app.x = ()=>{
 	return app.session.path('ctx')
@@ -53,6 +80,10 @@ app.c = ()=>{
 app.i = ()=>{
 	return app.session.path('img')
 }
+app.click = ()=>{
+	return app.session.path('click')
+}
+
 
 /*if(typeof test == 'undefined'){
 	alert('test가 undefined이다.');

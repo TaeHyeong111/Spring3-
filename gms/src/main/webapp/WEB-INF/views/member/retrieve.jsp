@@ -4,14 +4,13 @@
 <body>
 <div id="wrapper">
     
-
     <div id="content">
         <table id="mypage-table">  
         <tr>
             <th  rowspan='3'>	<img src="${img}/${profile}" alt="" />	</th> 
             
             <th>아이디</th>
-            <th colspan='2'>${user.userId} </th>
+            <th colspan='2'>${user.userid} </th>
         </tr>
         <tr>
             <th>이름</th>
@@ -25,7 +24,7 @@
             <th>나이</th>
             <th>${user.age}</th>
             <th>팀명</th>
-            <th>${user.teamId}</th>
+            <th>${user.teamid}</th>
         </tr>
         <tr>
             <th>성별</th>
@@ -39,25 +38,4 @@
          <a id="myPageMoveToDelete"> DELETE FORM </a> 
     </div>
     </div></div>
-    
-    <script>
-    document.getElementById('myPageMoveToUpdate').addEventListener('click',
-            function() {
-                router.move({ctx : '${ctx}',
-                            domain : 'member',
-                            action : 'move', 
-                            page : 'modify'
-                });
-            });
-            
-    document.getElementById('myPageMoveToDelete').addEventListener('click',
-            function() {
-            router.move({ctx : '${ctx}',
-                domain : 'member',
-                action : 'move', 
-                page : 'remove'
-                        });
-            });
-
-    </script>
 </body></html>

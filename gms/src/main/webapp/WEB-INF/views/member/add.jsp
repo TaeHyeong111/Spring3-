@@ -4,46 +4,13 @@
 <body>
 	<h1>Join</h1>
 	<form id="joinForm" name="joinForm">
-		Name : <input type="text" name="name"/><br>
-		User ID : <input type="text" name="userid" /> <br>
-		 Password : <input	type="text" name="password" /><br>
-		 SSN : <input type="text" name="ssn"/>
+		Name : <input type="text" name="name" required/><br>
+		User ID : <input type="text" name="userid" required/> <br>
+		 Password : <input	type="text" name="password" required/><br>
+		 SSN : <input type="text" name="ssn" required/>
 		 <input id="joinFormBtn" type="button" value="제출" />  
 		  
-		  <script>
-		  document.getElementById("joinFormBtn").addEventListener('click', function(){
-			  var x = service.nullChecker
-			  		  ([document.joinForm.name.value, 
-						document.joinForm.userid.value, 
-						document.joinForm.password.value,
-						document.joinForm.ssn.value]);
-				if(x.checker){
-					var form = document.getElementById('joinForm');
-					form.action = "${ctx}/member.do";
-					form.method = "post";
-					member.join(form.ssn.value);
-						
-						var json = {
-							name : ['age','gender','action',"page"],
-							value: ['','','add','mypage']
-						}
-						for(var i = 0; i<json.name.length; i++){
-							var node = document.createElement('input');
-							node.setAttribute('type','hidden');
-							node.setAttribute('name',json.name[i]);
-							node.setAttribute('value',json.value[i]);
-							form.appendChild(node);
-						}
-					form.gender.value = member.getGender();
-					form.age.value = member.getAge();
-					form.submit();
-					
-				}else{
-					alert(x.text);
-				}	
-			});
-    </script>
-		  
+
 		  <br>소속팀
 		  <input type="radio" name="teamid"  value="none" checked="checked"/> 없음
 		  <input type="radio" name="teamid"  value="nolja"/>놀자

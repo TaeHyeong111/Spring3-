@@ -11,7 +11,7 @@
 		  <input type="hidden" name="page" value="retrieve" />
 	</form>
 
-	<script>
+	<!-- <script>
 	document.getElementById('loginFormBtn')
     .addEventListener('click',function(){ //클릭 했을때 일어나는 행동 // String, Object
 	var x = service.nullChecker(
@@ -26,6 +26,6 @@
     	alert(x.text);
     }	
     });
-    </script>
+    </script> -->
 </body>
 </html>

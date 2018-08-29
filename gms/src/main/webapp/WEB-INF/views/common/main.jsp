@@ -5,7 +5,6 @@
 <html lang="en">
 <head>
 <title>Home</title>
-	
 	<link rel="shortcut icon" href="${ctx}/resources/img/favicon.ico" />
     <link href="${ctx}/resources/vendor/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="${ctx}/resources/vendor/fontawesome-free/css/all.min.css" type="text/css" rel="stylesheet">
@@ -37,6 +36,9 @@
     </div>
     <div id="footer">
         <tiles:insertAttribute name="footer"/>
+    </div>
+    <div id="retrieve">
+        <tiles:insertAttribute name="retrieve"/>
     </div>
     
 </div>
