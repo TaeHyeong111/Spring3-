@@ -11,7 +11,7 @@
     SELECT * FROM MEMBER WHERE USERID LIKE #{userid}
   </select>
   <select id="login" resultType="com.gms.web.domain.MemberDTO">
-  SELECT * FROM MEMBER WHERE USERID LIKE #{userid} AND PASSWORD LIKE #{password};
+  SELECT * FROM MEMBER WHERE USERID LIKE #{userid} AND PASSWORD LIKE #{password} ;
   </select>
   
 </mapper>
