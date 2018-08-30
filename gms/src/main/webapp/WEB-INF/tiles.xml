@@ -30,7 +30,7 @@
     <put-attribute name="retrieve" value="/WEB-INF/views/member/retrieve.jsp"/>
     </definition>
     
-    <definition name="add__succes" extends="public">
+    <definition name="add__success" extends="public">
     <put-attribute name="retrieve" value="/WEB-INF/views/member/login.jsp"/>
     </definition>
     

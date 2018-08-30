@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.gms.web.domain.MemberDTO;
 import com.gms.web.mapper.MemberMapper;
-import com.gms.web.repository.MemberDAO;
+import com.gms.web.mapper.MemberMapper;
 import com.gms.web.service.MemberService;
 
 @Service /*@Service싱글톤임*/

@@ -22,7 +22,7 @@ public class MemberController {
 	public String add(@ModelAttribute MemberDTO member) /*<<커맨드임* model은 값을 가져올떄 필요함*/ {
 		memberService.add(member);
 		System.out.println("멤버 : " + member);
-		return "add__succes";
+		return "add__success";
 	}
 	@RequestMapping("/list")
 	public void list() {}

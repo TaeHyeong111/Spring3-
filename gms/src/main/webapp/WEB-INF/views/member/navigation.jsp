@@ -7,6 +7,7 @@
           <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
+        <input type="hidden" id="session_id" value="${user.userid}"/>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" id="logout_btn">LogOut</a>
@@ -21,3 +22,15 @@
         </div>
       </div>
     </nav>
+    <script>
+    user.session({
+    	userid : '${user.userid}',
+    	name : '${user.name}',
+    	gender : '${user.gender}',
+    	age : '${user.age}',
+    	roll : '${user.roll}',
+    	teamid : '${user.teamid}',
+    	email : '${user.email}',
+    	phone : '${user.phone}'
+    });
+    </script>

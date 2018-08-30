@@ -1,5 +1,6 @@
 "use strict"; /*선언함으로써 에러시 넘어가지않음*/
 var app = app || {}; 
+var user = user || {};
 app = {
 		init : x=>{
 			app.session.ctx(x)
@@ -36,6 +37,10 @@ app = {
 					method:"POST"
 				})
 				.submit();
+			})
+			$('mypage_btn').click(()=>{
+				alert('마이페이지로 이동')
+				location.href = app.x()+'member/retrieve/'+userid
 			})
 			$('#myPageMoveToUpdate').click(()=>{
 				alert(app.click())
@@ -84,6 +89,12 @@ app.click = ()=>{
 	return app.session.path('click')
 }
 
+user.session = x=>{
+	$.each(x, function(k,v){
+		alert('key:'+k+',value:'+v);
+		sessionStorage.setItem(k, v);
+	})		
+		}
 
 /*if(typeof test == 'undefined'){
 	alert('test가 undefined이다.');
